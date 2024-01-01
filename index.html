@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>countdown loop</title>
+</head>
+<body>
+    <main>
+        <h1>Loooop mah time!</h1>
+        <section class="input-section duration">
+            <h2>Duration (in secs)</h2>
+            <button class="duration-in-secs">10</button>
+            <button class="duration-in-secs">30</button>
+            <button class="duration-in-secs">60</button>
+        </section>
+        <section class="input-section loop-number">
+            <h2>Number of times</h2>
+            <input type="number" id="number-input">
+        </section>
+        <section class="countdown-timer">
+            <p id="timer">00:30</p>
+            <p>Loop Count: <span id="loop-count">10</span></p>
+        </section>
+    </main>
+</body>
+</html>
