@@ -1,6 +1,59 @@
 body {
     font-family: 'Space Mono', monospace;
+    margin: 0;
     color: #fbfbfb;
     background: #171823;
     text-align: center;
+    height: 100vh;
+}
+
+body, main, .input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 0.9rem;
+}
+
+main {
+    max-width: 500px;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input-section {
+    background: #25273D;
+    padding: 0.5em 1.5em;
+    border-radius: 3px;
+    gap: 1rem;
+}
+
+input, button {
+    background: #171823;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    font-family: inherit;
+    padding: 0.5em 1em;
+}
+
+#timer {
+    font-size: 3.5rem;
+    background-color: #171823;
+    padding: 0.5em 0.6em;
+    border: 8px solid #25273D;
+    border-radius: 8px;
+    margin-top: 0.2em;
 }
