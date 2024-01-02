@@ -7,6 +7,7 @@ const loopCountDisplay = document.getElementById('loop-count') as HTMLSpanElemen
 let durationInput: number
 let numberOfTimes: number
 let countdown: number
+let loopCount: string
 
 durationRadioBtns.forEach(radioBtn => {
     radioBtn.addEventListener('click', function() {
@@ -17,11 +18,21 @@ durationRadioBtns.forEach(radioBtn => {
 startCountBtn.addEventListener('click', function() {
     loopCountDisplay.textContent = numberInput.value
     numberOfTimes = parseInt(numberInput.value)
-    
-    displayTime(durationInput)
+    let seconds = durationInput
+    displayTime(seconds)
     countdown = setInterval(() => {
-        durationInput--
-        displayTime(durationInput)
+        seconds--
+        displayTime(seconds)
+
+        if(seconds <= 0) {
+            numberOfTimes--
+            loopCountDisplay.textContent = String(numberOfTimes)
+            seconds = durationInput + 1
+
+            if(numberOfTimes === 0) {
+                clearInterval(countdown)
+            }
+        }
     }, 1000)
 })
 

@@ -7,6 +7,7 @@ const loopCountDisplay = document.getElementById('loop-count');
 let durationInput;
 let numberOfTimes;
 let countdown;
+let loopCount;
 durationRadioBtns.forEach(radioBtn => {
     radioBtn.addEventListener('click', function () {
         durationInput = parseInt(radioBtn.value);
@@ -15,10 +16,19 @@ durationRadioBtns.forEach(radioBtn => {
 startCountBtn.addEventListener('click', function () {
     loopCountDisplay.textContent = numberInput.value;
     numberOfTimes = parseInt(numberInput.value);
-    displayTime(durationInput);
+    let seconds = durationInput;
+    displayTime(seconds);
     countdown = setInterval(() => {
-        durationInput--;
-        displayTime(durationInput);
+        seconds--;
+        displayTime(seconds);
+        if (seconds <= 0) {
+            numberOfTimes--;
+            loopCountDisplay.textContent = String(numberOfTimes);
+            seconds = durationInput + 1;
+            if (numberOfTimes === 0) {
+                clearInterval(countdown);
+            }
+        }
     }, 1000);
 });
 function displayTime(duration) {
