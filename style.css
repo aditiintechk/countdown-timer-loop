@@ -39,7 +39,7 @@ main {
     gap: 1rem;
 }
 
-input, button {
+input {
     background: #171823;
     border: none;
     outline: none;
@@ -49,15 +49,8 @@ input, button {
     padding: 0.5em 1em;
 }
 
-button {
-    border: 2px solid #171823;
+.duration-in-secs {
     cursor: pointer;
-}
-
-button:hover,
-button:focus {
-    background: #25273D;
-    border: 2px solid #171823;
 }
 
 #timer {

@@ -15,9 +15,17 @@
         <section class="input-section duration">
             <h2>Duration (in secs)</h2>
             <div class="buttons">
-                <button class="duration-in-secs">10</button>
-                <button class="duration-in-secs">30</button>
-                <button class="duration-in-secs">60</button>
+                <label>
+                <input type="radio" name="duration" value="10" class="duration-in-secs"> 10
+                </label>
+                
+                <label>
+                <input type="radio" name="duration" value="30" class="duration-in-secs"> 30
+                </label>
+                
+                <label>
+                <input type="radio" name="duration" value="60" class="duration-in-secs"> 60
+                </label>
             </div>
         </section>
         <section class="input-section loop-number">
@@ -25,7 +33,7 @@
             <input type="number" id="number-input" value="1">
         </section>
         <section class="countdown-timer">
-            <p id="timer">00:30</p>
+            <p id="timer">00:00</p>
             <p>Loop Count: <span id="loop-count">1</span></p>
         </section>
     </main>
