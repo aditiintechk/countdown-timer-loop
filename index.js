@@ -1,21 +1,27 @@
 "use strict";
+// Target Inputs
 const durationRadioBtns = document.getElementsByName('duration');
 const numberInput = document.getElementById('number-input');
 const startCountBtn = document.getElementById('start-count');
 const timer = document.getElementById('timer');
 const loopCountDisplay = document.getElementById('loop-count');
+// Declarations
 let durationInput;
 let numberOfTimes;
 let countdown;
 let loopCount;
+// Event Listeners
 durationRadioBtns.forEach(radioBtn => {
     radioBtn.addEventListener('click', function () {
         durationInput = parseInt(radioBtn.value);
     });
 });
-startCountBtn.addEventListener('click', function () {
+startCountBtn.addEventListener('click', countdownTimerLoop);
+// Functions
+function countdownTimerLoop() {
     loopCountDisplay.textContent = numberInput.value;
     numberOfTimes = parseInt(numberInput.value);
+    numberInput.value = '';
     let seconds = durationInput;
     displayTime(seconds);
     countdown = setInterval(() => {
@@ -30,7 +36,7 @@ startCountBtn.addEventListener('click', function () {
             }
         }
     }, 1000);
-});
+}
 function displayTime(duration) {
     const remainingMinutes = Math.floor(duration / 60);
     const remainingSeconds = duration % 60;
