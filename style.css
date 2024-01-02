@@ -70,9 +70,9 @@ input, #start-count {
 }
 
 @media(max-width: 400px) {
-    /* body {
+    body {
         font-size: 12px;
-    } */
+    }
 
     main {
         margin: 0 1.5em;
