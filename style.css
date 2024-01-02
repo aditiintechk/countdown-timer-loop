@@ -39,7 +39,7 @@ main {
     gap: 1rem;
 }
 
-input {
+input, #start-count {
     background: #171823;
     border: none;
     outline: none;
@@ -49,8 +49,13 @@ input {
     padding: 0.5em 1em;
 }
 
-.duration-in-secs {
+.duration-in-secs, #start-count {
     cursor: pointer;
+}
+
+#start-count:hover,
+#start-count:focus {
+    background: rgb(62, 65, 99);
 }
 
 #timer {
