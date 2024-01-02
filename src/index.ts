@@ -1,20 +1,36 @@
 const durationRadioBtns = document.getElementsByName('duration') as NodeListOf<HTMLInputElement>
-const numberOfTimes = document.getElementById('number-input') as HTMLInputElement
+const numberInput = document.getElementById('number-input') as HTMLInputElement
 const startCountBtn = document.getElementById('start-count') as HTMLButtonElement
+const timer = document.getElementById('timer') as HTMLParagraphElement
+const loopCountDisplay = document.getElementById('loop-count') as HTMLSpanElement
 
-let durationInput: string
-let loopCount: number
+let durationInput: number
+let numberOfTimes: number
+let countdown: number
 
 durationRadioBtns.forEach(radioBtn => {
     radioBtn.addEventListener('click', function() {
-        durationInput = radioBtn.value
-        console.log(durationInput)
+        durationInput = parseInt(radioBtn.value)
     })
 })
 
 startCountBtn.addEventListener('click', function() {
-    loopCount = parseInt(numberOfTimes.value)
-    console.log(loopCount)
+    loopCountDisplay.textContent = numberInput.value
+    numberOfTimes = parseInt(numberInput.value)
+    
+    displayTime(durationInput)
+    countdown = setInterval(() => {
+        durationInput--
+        displayTime(durationInput)
+    }, 1000)
 })
+
+
+function displayTime(duration:number) {
+    const remainingMinutes = Math.floor(duration / 60)
+    const remainingSeconds = duration % 60
+    timer.textContent = `${(remainingMinutes < 10) ? '0' : ''}${remainingMinutes}:${(remainingSeconds < 10) ? '0' : ''}${remainingSeconds}`
+}
+
 
 
