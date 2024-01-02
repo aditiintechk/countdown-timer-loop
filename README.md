@@ -1,28 +1,28 @@
 # Countdown Timer Loop
 
-## Summary
+### Summary
 
 This project is a simple countdown timer loop that allows users to set the number of seconds (10, 30, or 60) and the number of times the timer should loop. It provides a convenient way to manage repetitive tasks or activities with predefined time intervals.
 
-## Live Demo
+### Live Demo
 
 Experience the countdown timer loop in action by visiting the [live application](https://aditi002-holo.github.io/countdown-timer-loop/).
 
 ![](./assets/demo/app-preview.png)
 
-## Stack Used
+### Stack Used
 
 - HTML
 - CSS
 - TypeScript
 
-## Features
+### Features
 
 - Set the countdown timer duration (10, 30, or 60 seconds).
 - Specify the number of times the timer should loop.
 - Clean and user-friendly interface.
 
-## Usage
+### Usage
 
 1. Open the [live application](https://aditi002-holo.github.io/countdown-timer-loop/).
 2. Input the desired countdown duration (10, 30, or 60 seconds).
@@ -30,6 +30,6 @@ Experience the countdown timer loop in action by visiting the [live application]
 4. Click the "Start" button to initiate the countdown loop.
 5. The timer will run for the specified duration, and upon completion, it will reset and repeat based on the specified loop count.
 
-## Author
+### Author
 
 - Aditi Deshpande
