@@ -6,7 +6,7 @@ This project is a simple countdown timer loop that allows users to set the numbe
 
 ### Live Demo
 
-Experience the countdown timer loop in action by visiting the [live application](https://aditi002-holo.github.io/countdown-timer-loop/).
+Experience the countdown timer loop in action by visiting the [live application](https://aditiintechk.github.io/countdown-timer-loop/).
 
 ![](./assets/demo/app-preview.png)
 
@@ -24,7 +24,7 @@ Experience the countdown timer loop in action by visiting the [live application]
 
 ### Usage
 
-1. Open the [live application](https://aditi002-holo.github.io/countdown-timer-loop/).
+1. Open the [live application](https://aditiintechk.github.io/countdown-timer-loop/).
 2. Input the desired countdown duration (10, 30, or 60 seconds).
 3. Enter the number of times you want the timer to loop.
 4. Click the "Start" button to initiate the countdown loop.
